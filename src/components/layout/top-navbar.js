@@ -1,0 +1,55 @@
+import classNames from "classnames";
+import Image from "next/image";
+import { useRouter } from "next/router";
+
+const NavigationList = () => {
+  return (
+    <ul className="flex items-center bg-[rgb(246,252,220,0.2)] rounded-full">
+      {[
+        "Home",
+        "About Us",
+        "Games",
+        "Services",
+        "Portfolio",
+        "Blog",
+        "Get in Touch",
+      ].map((e, index, arr) => (
+        <li key={e}>
+          <button
+            type="button"
+            className={classNames(
+              "py-3 px-2 text-[rgba(255,255,255,0.8)] hover:text-[rgba(255,255,255,1)] transition-colors cursor-pointer",
+              { "pl-5": index <= 0, "pr-5": index >= arr.length - 1 }
+            )}
+          >
+            {e}
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+const TopNavbar = () => {
+  const router = useRouter();
+  return (
+    <nav className="flex justify-between items-center bg-[#4813D8] w-full h-[72px] px-10">
+      <button
+        type="button"
+        className="cursor-pointer"
+        onCLick={() => router.push("/")}
+      >
+        <Image
+          src="https://s3-alpha-sig.figma.com/img/cb78/1df7/8234b07de868e06948b496bec985abae?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EuQwFNTl8Tc~QCUeQ2VsPTGD-~x523wSWAp0l3P6TnrLtQqrUM0qB51gL-FrWyKUOl53CjGO2JaIbTlk7am7fW58IaJxu9tnon5MQkGeTlLbvRS2rheQSlhfQQ1lY72WWGpW2C37Q-zGmQDOelfVDaqczKeeaRMWmlq8RvIIWwBuaPwUj4~Id7NPO-yQyNU1dnbH~JQjqi~iTDC1SejLyaCrBOCB5W2K111XLexshScEKKFcyX4xyOVYPNCBSi0JE4I3VyL9P3NXUvLdet2ccs2aQOYQQ-45OEEOWaknXhzDhR76bz0~D2py9gYUnJsh1~jtPQapHNI16NV4kpkQEQ__"
+          width={159}
+          height={52}
+          alt="Acedia Logo"
+        />
+      </button>
+      <NavigationList />
+      <div />
+    </nav>
+  );
+};
+
+export default TopNavbar;
