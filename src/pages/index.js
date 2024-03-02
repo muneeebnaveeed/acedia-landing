@@ -1,10 +1,7 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import TopNavbar from "@/components/layout/top-navbar";
+import HomeView from "@/views/home/home";
 
-const inter = Inter({ subsets: ["latin"] });
 const Home = () => {
-  return <TopNavbar />;
+  return <HomeView />;
 };
 
 export default Home;

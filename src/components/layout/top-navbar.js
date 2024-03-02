@@ -4,28 +4,30 @@ import { useRouter } from "next/router";
 
 const NavigationList = () => {
   return (
-    <ul className="flex items-center bg-[rgb(246,252,220,0.2)] rounded-full">
-      {[
-        "Home",
-        "About Us",
-        "Games",
-        "Services",
-        "Portfolio",
-        "Blog",
-        "Get in Touch",
-      ].map((e, index, arr) => (
-        <li key={e}>
-          <button
-            type="button"
-            className={classNames(
-              "py-3 px-2 text-[rgba(255,255,255,0.8)] hover:text-[rgba(255,255,255,1)] transition-colors cursor-pointer",
-              { "pl-5": index <= 0, "pr-5": index >= arr.length - 1 }
-            )}
-          >
-            {e}
-          </button>
-        </li>
-      ))}
+    <ul className="flex items-center justify-center w-full ">
+      <div className="bg-[rgb(246,252,220,0.2)] flex items-center rounded-full">
+        {[
+          "Home",
+          "About Us",
+          "Games",
+          "Services",
+          "Portfolio",
+          "Blog",
+          "Get in Touch",
+        ].map((e, index, arr) => (
+          <li key={e}>
+            <button
+              type="button"
+              className={classNames(
+                "py-3 px-2 text-[15px] text-[rgba(255,255,255,0.8)] hover:text-[rgba(255,255,255,1)] transition-colors cursor-pointer",
+                { "pl-5": index <= 0, "pr-5": index >= arr.length - 1 }
+              )}
+            >
+              {e}
+            </button>
+          </li>
+        ))}
+      </div>
     </ul>
   );
 };
@@ -33,10 +35,10 @@ const NavigationList = () => {
 const TopNavbar = () => {
   const router = useRouter();
   return (
-    <nav className="flex justify-between items-center bg-[#4813D8] w-full h-[72px] px-10">
+    <nav className="relative bg-[#4813D8] w-full h-[72px] px-10">
       <button
         type="button"
-        className="cursor-pointer"
+        className="absolute -translate-y-1/2 cursor-pointer top-9 left-10"
         onCLick={() => router.push("/")}
       >
         <Image
@@ -46,8 +48,9 @@ const TopNavbar = () => {
           alt="Acedia Logo"
         />
       </button>
-      <NavigationList />
-      <div />
+      <div className="flex items-center justify-between w-full h-full">
+        <NavigationList />
+      </div>
     </nav>
   );
 };
