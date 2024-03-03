@@ -16,20 +16,29 @@ const HomeView = () => {
           className="absolute pointer-events-none z-1 opacity-5"
         />
         <TopNavbar />
-        <section className="w-full h-[950px] bg-[url('/assets/images/header-image.jpg')] flex justify-between items-end pb-28 px-10">
-          <div className="font-serif">
-            <h1 className="text-[137px] text-white uppercase translate-y-7">
-              The Grave Keeper
-            </h1>
-            <h3 className="text-[48px] text-white">Coming Winter, 2024</h3>
+        <section className="w-full relative h-[950px] pb-28 px-10 overflow-clip">
+          <div className="absolute top-0 left-0 z-[-1] scale-[103%]">
+            <Image
+              src="/assets/images/header-image.jpg"
+              width={1920}
+              height={950}
+            />
           </div>
-          <div>
-            <CtaButton
-              variant={CtaButtonVariants.primary}
-              className="w-[240px]"
-            >
-              Join the waitlist
-            </CtaButton>
+          <div className="z-10 flex items-end justify-between w-full h-full">
+            <div className="font-serif">
+              <h1 className="text-[137px] text-white uppercase translate-y-7">
+                The Grave Keeper
+              </h1>
+              <h3 className="text-[48px] text-white">Coming Winter, 2024</h3>
+            </div>
+            <div>
+              <CtaButton
+                variant={CtaButtonVariants.primary}
+                className="w-[240px]"
+              >
+                Join the waitlist
+              </CtaButton>
+            </div>
           </div>
         </section>
       </div>
