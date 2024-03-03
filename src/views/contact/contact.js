@@ -61,7 +61,7 @@ const ContactView = () => {
                   Email
                 </label>
                 <input
-                  type="text"
+                  type="email"
                   id="email"
                   name="email"
                   className="bg-[#A2FF00] p-[20px] text-black flex-1"
