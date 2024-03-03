@@ -4,6 +4,7 @@ import React from "react";
 import ProjectTile from "./project-tile";
 import Footer from "../../components/layout/footer";
 import CtaButton, { CtaButtonVariants } from "@/components/cta-button";
+import Portfolio from "./portfolio";
 
 const HomeView = () => {
   return (
@@ -88,7 +89,7 @@ const HomeView = () => {
           </div>
         </div>
       </section>
-      <section className="relative px-10 pt-[500px] overflow-clip">
+      <section className="relative px-10 pt-[500px] pb-[80px] overflow-clip">
         <div className="absolute z-[-1] top-0 right-0">
           <Image
             src="/assets/images/acedia-guide-(1)-16.png"
@@ -123,6 +124,7 @@ const HomeView = () => {
           </div>
         </div>
       </section>
+      <Portfolio />
       <section className="py-[86px] px-10 relative">
         <div className="absolute top-0 left-0 rotate-[-0.61] z-[-1]">
           <Image
