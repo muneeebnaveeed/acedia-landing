@@ -3,11 +3,11 @@ import React from "react";
 
 const ServiceBlock = ({ title, children }) => {
   return (
-    <div>
+    <div className="w-full">
       <h3 className="font-bold text-[26px] leading-[32px] text-[#F7FCDE] mb-[15px]">
         {title}
       </h3>
-      <p className="font-medium text-[18px] leading-[36px] text-[#F7FCD] opacity-90 max-w-[540px]">
+      <p className="font-medium text-[18px] leading-[36px] text-[#F7FCD] opacity-90">
         {children}
       </p>
     </div>
@@ -35,12 +35,18 @@ const Services = () => {
             width={565}
             height={622}
           />
-          <div className="flex flex-col gap-[60px]">
+          <div className="flex flex-1 flex-col gap-[60px]">
             <ServiceBlock title="Game Development">
-            Working primarily with Unreal Engine, Blender, Maya & Adobe Substance, we develop games for PC, Console & Mobile. We have an affinity for story-based games with beautiful visuals & immersive sound design. Got a project we could work together on? You know what to do.
+              Working primarily with Unreal Engine, Blender, Maya & Adobe
+              Substance, we develop games for PC, Console & Mobile. We have an
+              affinity for story-based games with beautiful visuals & immersive
+              sound design. Got a project we could work together on? You know
+              what to do.
             </ServiceBlock>
             <ServiceBlock title="3D Asset Creation">
-            Custom-modeled 3D assets such as models & environments made completely from scratch in Blender to fit your exact creative needs.
+              Custom-modeled 3D assets such as models & environments made
+              completely from scratch in Blender to fit your exact creative
+              needs.
             </ServiceBlock>
             <p className="font-bold text-[26px] leading-[32px] text-[#F7FCDE]">
               Ready to make a change?{" "}
@@ -49,12 +55,14 @@ const Services = () => {
               </span>
             </p>
           </div>
-          <div className="flex flex-col gap-[60px]">
+          <div className="flex flex-1 flex-col gap-[60px]">
             <ServiceBlock title="3D Animation & Visualization">
-            End-to-end 3D animations & visualizations for games, film, TV and music videos, made with Blender & Maya.
+              End-to-end 3D animations & visualizations for games, film, TV and
+              music videos, made with Blender & Maya.
             </ServiceBlock>
             <ServiceBlock title="Sound Design">
-            Audio production ranging from foley & sound design to music recording & production for games, film, TV & music videos.
+              Audio production ranging from foley & sound design to music
+              recording & production for games, film, TV & music videos.
             </ServiceBlock>
           </div>
         </div>

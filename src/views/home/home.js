@@ -9,7 +9,7 @@ import Services from "./services";
 import { useRouter } from "next/router";
 
 const HomeView = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <>
       <div className="relative">
@@ -38,7 +38,10 @@ const HomeView = () => {
             <div>
               <CtaButton
                 variant={CtaButtonVariants.primary}
-                className="w-[240px]" onClick={()=>window.open("https://forms.gle/gfZk46cDaCepj7FQ7","_blank")}
+                className="w-[240px]"
+                onClick={() =>
+                  window.open("https://forms.gle/gfZk46cDaCepj7FQ7", "_blank")
+                }
               >
                 Join the waitlist
               </CtaButton>
@@ -56,7 +59,7 @@ const HomeView = () => {
           />
         </div>
         <div className="flex gap-[100px] text-[29px] leading-[44px] font-sans">
-          <div className="flex flex-col gap-[50px]">
+          <div className="flex flex-1 flex-col gap-[50px]">
             <p>
               A game development & creative studio delivering narrative-driven,
               rich-in-visuals video games PC & Console, and offering services
@@ -71,8 +74,8 @@ const HomeView = () => {
               2024.
             </p>
           </div>
-          <div className="flex flex-col gap-[50px]">
-            <p>
+          <div className="flex flex-1 flex-col gap-[50px]">
+            <p className="mb-8">
               We’re extremely passionate about telling stories, be it through
               the games we develop, the animations we make, the sounds we design
               & the music we create. Sounds interesting? Wanna work with us?
@@ -83,7 +86,10 @@ const HomeView = () => {
             </p>
             <CtaButton
               variant={CtaButtonVariants.primary}
-              className="w-[300px]" onClick={()=>{router.push("/contact")}}
+              className="w-[300px]"
+              onClick={() => {
+                router.push("/contact");
+              }}
             >
               Let's work together
             </CtaButton>
@@ -99,8 +105,12 @@ const HomeView = () => {
           />
         </div>
         <div className="flex flex-col gap-[200px] z-10 rounded-[32px]">
-          <ProjectTile img="https://cdnb.artstation.com/p/assets/images/images/066/424/955/large/acedia-graded.jpg" textPrefix="3D">
-          Still from a music video we recently animated for a New York-based musician.
+          <ProjectTile
+            img="https://cdnb.artstation.com/p/assets/images/images/066/424/955/large/acedia-graded.jpg"
+            textPrefix="3D"
+          >
+            Still from a music video we recently animated for a New York-based
+            musician.
           </ProjectTile>
           <div>
             <ProjectTile
@@ -108,7 +118,8 @@ const HomeView = () => {
               textPrefix="3D"
               className="mb-20"
             >
-              Still from a music video we recently animated for a New York-based musician.
+              Still from a music video we recently animated for a New York-based
+              musician.
             </ProjectTile>
             <p className="text-[29px] leading-[44px] font-serif font-bold rounded-[32px]">
               <a
