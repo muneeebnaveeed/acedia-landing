@@ -7,27 +7,27 @@ export const clashGrotesk = localFont({
   variable: "--font-clash-grotesk",
   src: [
     {
-      path: "../assets/fonts/ClashGrotesk-Light.woff2",
+      path: "../assets/fonts/GROTESKLIGHT.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../assets/fonts/ClashGrotesk-Regular.woff2",
+      path: "../assets/fonts/GROTESKREGULAR.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../assets/fonts/ClashGrotesk-Medium.woff2",
+      path: "../assets/fonts/GROTESKMEDIUM.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../assets/fonts/ClashGrotesk-SemiBold.woff2",
+      path: "../assets/fonts/GROTESKSEMIBOLD.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../assets/fonts/ClashGrotesk-Bold.woff2",
+      path: "../assets/fonts/GROTESKBOLD.woff2",
       weight: "700",
       style: "normal",
     },
