@@ -24,11 +24,14 @@ const HomeView = () => {
         />
         <TopNavbar
           onClickGames={() => {
-            debugger;
-            gamesSectionRef.current.scrollIntoView();
+            gamesSectionRef.current.scrollIntoView({ behavior: "smooth" });
           }}
-          onClickPortfolio={() => portfolioSectionRef.current.scrollIntoView()}
-          onClickServices={() => servicesSectionRef.current.scrollIntoView()}
+          onClickPortfolio={() =>
+            portfolioSectionRef.current.scrollIntoView({ behavior: "smooth" })
+          }
+          onClickServices={() =>
+            servicesSectionRef.current.scrollIntoView({ behavior: "smooth" })
+          }
         />
         <section
           className="w-full relative h-[950px] pb-28 px-10 overflow-clip"

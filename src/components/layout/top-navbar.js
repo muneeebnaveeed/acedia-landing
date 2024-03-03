@@ -46,7 +46,7 @@ const NavigationList = ({
                 else if (e.label === "Games") {
                   if (router.pathname === "/") onClickGames?.();
                   else router.push("/").then(() => onClickGames?.());
-                } else if (e.label === "Portfollio") {
+                } else if (e.label === "Portfolio") {
                   if (router.pathname === "/") onClickPortfolio?.();
                   else router.push("/").then(() => onClickPortfolio?.());
                 } else if (e.label === "Services") {
@@ -66,7 +66,7 @@ const NavigationList = ({
   );
 };
 
-const TopNavbar = () => {
+const TopNavbar = ({ onClickGames, onClickPortfolio, onClickServices }) => {
   const router = useRouter();
   return (
     <nav className="relative bg-[#4813D8] w-full h-[72px] px-10">
@@ -83,7 +83,11 @@ const TopNavbar = () => {
         />
       </button>
       <div className="flex items-center justify-between w-full h-full">
-        <NavigationList />
+        <NavigationList
+          onClickGames={onClickGames}
+          onClickPortfolio={onClickPortfolio}
+          onClickServices={onClickServices}
+        />
       </div>
     </nav>
   );
