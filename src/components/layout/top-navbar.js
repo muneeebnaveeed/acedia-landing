@@ -8,29 +8,59 @@ const links = [
   { label: "Games", href: "/" },
   { label: "Portfolio", href: "/" },
   { label: "Services", href: "/" },
-  // { label: "Blog", href: "/" },
   { label: "Contact Us", href: "/contact" },
 ];
 
-const NavigationList = () => {
+const NavigationListItem = ({ isFirstItem, isLastItem, children, onClick }) => {
+  return (
+    <li>
+      <button
+        type="button"
+        onClick={onClick}
+        className={classNames(
+          "py-3 px-2 text-[15px] text-[rgba(255,255,255,0.8)] hover:text-[rgba(255,255,255,1)] transition-colors cursor-pointer font-sans",
+          { "pl-5": isFirstItem, "pr-5": isLastItem }
+        )}
+      >
+        {children}
+      </button>
+    </li>
+  );
+};
+
+const NavigationList = ({
+  onClickGames,
+  onClickPortfolio,
+  onClickServices,
+}) => {
   const router = useRouter();
   return (
     <ul className="flex items-center justify-center w-full ">
       <div className="bg-[rgb(246,252,220,0.2)] flex items-center rounded-full">
-        {links.map((e, index, arr) => (
-          <li key={e.label}>
-            <button
-              type="button"
-              onClick={() => router.push(e.href)}
-              className={classNames(
-                "py-3 px-2 text-[15px] text-[rgba(255,255,255,0.8)] hover:text-[rgba(255,255,255,1)] transition-colors cursor-pointer font-sans",
-                { "pl-5": index <= 0, "pr-5": index >= arr.length - 1 }
-              )}
+        {links.map((e, index, arr) => {
+          return (
+            <NavigationListItem
+              onClick={() => {
+                if (e.label === "Home") router.push("/");
+                else if (e.label === "About Us") router.push("/about");
+                else if (e.label === "Games") {
+                  if (router.pathname === "/") onClickGames?.();
+                  else router.push("/").then(() => onClickGames?.());
+                } else if (e.label === "Portfollio") {
+                  if (router.pathname === "/") onClickPortfolio?.();
+                  else router.push("/").then(() => onClickPortfolio?.());
+                } else if (e.label === "Services") {
+                  if (router.pathname === "/") onClickServices?.();
+                  else router.push("/").then(() => onClickServices?.());
+                } else if (e.label === "Contact Us") router.push("/contact");
+              }}
+              isLastItem={index >= arr.length - 1}
+              isFirstItem={index <= 0}
             >
               {e.label}
-            </button>
-          </li>
-        ))}
+            </NavigationListItem>
+          );
+        })}
       </div>
     </ul>
   );

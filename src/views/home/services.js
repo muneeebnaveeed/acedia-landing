@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Router, useRouter } from "next/router";
 import React from "react";
 
 const ServiceBlock = ({ title, children }) => {
@@ -15,6 +16,7 @@ const ServiceBlock = ({ title, children }) => {
 };
 
 const Services = () => {
+  const router = useRouter();
   return (
     <section className="py-[86px] px-10 relative">
       <div className="absolute top-0 left-0 rotate-[-0.61] z-[-1]">
@@ -49,10 +51,13 @@ const Services = () => {
               needs.
             </ServiceBlock>
             <p className="font-bold text-[26px] leading-[32px] text-[#F7FCDE]">
-              Ready to make a change?{" "}
-              <span className="text-[#CFED4E] underline">
-                Let's get started
-              </span>
+              Ready to work with us?{" "}
+              <a
+                onClick={() => router.push("/contact")}
+                className="text-[#CFED4E] underline"
+              >
+                Reach out!
+              </a>
             </p>
           </div>
           <div className="flex flex-1 flex-col gap-[60px]">

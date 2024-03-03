@@ -1,8 +1,10 @@
 import CtaButton, { CtaButtonVariants } from "@/components/cta-button";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <footer className="w-full bg-[#A2FF00] font-serif relative overflow-clip">
       <Image
@@ -12,19 +14,27 @@ const Footer = () => {
         className="absolute right-0 -rotate-90 top-[-32%]"
       />
       <div className="px-10 py-[250px] z-10">
-        <div className="flex gap-[168px] mb-[140px]">
-          <div>
+        <div className="flex justify-center w-full">
+          <div className="mb-[140px]">
             <h2 className="font-semibold text-[86px] leading-[88px] text-[#4813D8] opacity-80 mb-[43px] max-w-[768px]">
               Let's build something really good together.
             </h2>
-            <CtaButton variant={CtaButtonVariants.footer}>
-              Schedule time to chat with us
+            <CtaButton
+              variant={CtaButtonVariants.footer}
+              onClick={() => router.push("/contact")}
+            >
+              Get in touch with us
             </CtaButton>
           </div>
         </div>
+
         <div className="flex items-center justify-center w-full gap-8">
           <a href="https://twitter.com/acediadevs" target="_blank">
-            <Image src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNCAyNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGQ9Ik0xNC4wOTU0NzksMTAuMzE2NDgyTDIyLjI4NjM1NCwxaC0xLjk0MDcxOGwtNy4xMTUzNTIsOC4wODc2ODJMNy41NTE0MTQsMUgxbDguNTg5NDg4LDEyLjIzMTA5M0wxLDIzaDEuOTQwNzE3ICBsNy41MDkzNzItOC41NDI4NjFMMTYuNDQ4NTg3LDIzSDIzTDE0LjA5NTQ3OSwxMC4zMTY0ODJ6IE0xMS40MzY1MjIsMTMuMzM4NDY1bC0wLjg3MTYyNC0xLjIxODcwNGwtNi45MjQzMTEtOS42ODgxNWgyLjk4MTMzOSAgbDUuNTg5NzgsNy44MjE1NWwwLjg2Nzk0OSwxLjIxODcwNGw3LjI2NTA2LDEwLjE2NjI3MWgtMi45ODEzMzlMMTEuNDM2NTIyLDEzLjMzODQ2NXoiLz48L3N2Zz4=" width={80} height={80} />
+            <Image
+              src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNCAyNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGQ9Ik0xNC4wOTU0NzksMTAuMzE2NDgyTDIyLjI4NjM1NCwxaC0xLjk0MDcxOGwtNy4xMTUzNTIsOC4wODc2ODJMNy41NTE0MTQsMUgxbDguNTg5NDg4LDEyLjIzMTA5M0wxLDIzaDEuOTQwNzE3ICBsNy41MDkzNzItOC41NDI4NjFMMTYuNDQ4NTg3LDIzSDIzTDE0LjA5NTQ3OSwxMC4zMTY0ODJ6IE0xMS40MzY1MjIsMTMuMzM4NDY1bC0wLjg3MTYyNC0xLjIxODcwNGwtNi45MjQzMTEtOS42ODgxNWgyLjk4MTMzOSAgbDUuNTg5NzgsNy44MjE1NWwwLjg2Nzk0OSwxLjIxODcwNGw3LjI2NTA2LDEwLjE2NjI3MWgtMi45ODEzMzlMMTEuNDM2NTIyLDEzLjMzODQ2NXoiLz48L3N2Zz4="
+              width={80}
+              height={80}
+            />
           </a>
           <a href="http://www.instagram.com/acediadevs" target="_blank">
             <Image

@@ -1,6 +1,6 @@
 import TopNavbar from "@/components/layout/top-navbar";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import ProjectTile from "./project-tile";
 import Footer from "../../components/layout/footer";
 import CtaButton, { CtaButtonVariants } from "@/components/cta-button";
@@ -10,6 +10,9 @@ import { useRouter } from "next/router";
 
 const HomeView = () => {
   const router = useRouter();
+  const gamesSectionRef = useRef();
+  const portfolioSectionRef = useRef();
+  const servicesSectionRef = useRef();
   return (
     <>
       <div className="relative">
@@ -19,8 +22,18 @@ const HomeView = () => {
           height={1080}
           className="absolute pointer-events-none z-1 opacity-5"
         />
-        <TopNavbar />
-        <section className="w-full relative h-[950px] pb-28 px-10 overflow-clip">
+        <TopNavbar
+          onClickGames={() => {
+            debugger;
+            gamesSectionRef.current.scrollIntoView();
+          }}
+          onClickPortfolio={() => portfolioSectionRef.current.scrollIntoView()}
+          onClickServices={() => servicesSectionRef.current.scrollIntoView()}
+        />
+        <section
+          className="w-full relative h-[950px] pb-28 px-10 overflow-clip"
+          ref={gamesSectionRef}
+        >
           <div className="absolute top-0 left-0 z-[-1] scale-[103%]">
             <Image
               src="/assets/images/header-image.jpg"
@@ -133,8 +146,12 @@ const HomeView = () => {
           </div>
         </div>
       </section>
-      <Portfolio />
-      <Services />
+      <section className="w-full" ref={portfolioSectionRef}>
+        <Portfolio />
+      </section>
+      <section className="w-full" ref={servicesSectionRef}>
+        <Services />
+      </section>
       <Footer />
     </>
   );

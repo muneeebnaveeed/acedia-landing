@@ -19,7 +19,6 @@ const ContactView = () => {
           <form
             className="px-[53px] py-[68px] bg-[#4813D8] rounded-[38px] w-full flex flex-col gap-[80px]"
             method="POST"
-            name="contact-form"
             action="https://formspree.io/f/mrgnkwlr"
           >
             <div className="flex items-center gap-[80px]">
