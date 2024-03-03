@@ -13,9 +13,6 @@ const TeamMemberTile = ({ img, name, children, className }) => {
           {name}
         </p>
         <p className="text-[28px] leading-[44px] font-medium">{children}</p>
-        <p className="text-[#4813D8] text-[28px] leading-[44px] underline">
-          Read about our approach
-        </p>
       </div>
     </div>
   );

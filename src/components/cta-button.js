@@ -22,10 +22,11 @@ const RightArrowIcon = ({ className }) => (
   </svg>
 );
 
-const CtaButtonBase = ({ children, className, htmlType = "button" }) => {
+const CtaButtonBase = ({ children, className, onClick, htmlType = "button" }) => {
   return (
     <button
       type={htmlType}
+      onClick={onClick}
       className={cls(
         "py-3 flex justify-between items-center px-10 text-[18px] leading-[36px] rounded-full",
         className?.root
@@ -37,10 +38,11 @@ const CtaButtonBase = ({ children, className, htmlType = "button" }) => {
   );
 };
 
-const CtaButton = ({ className, variant, children, htmlType = "button" }) => {
+const CtaButton = ({ className, variant, children, onClick, htmlType = "button" }) => {
   return (
     <CtaButtonBase
       htmlType={htmlType}
+      onClick={onClick}
       className={{
         root: cls(
           {

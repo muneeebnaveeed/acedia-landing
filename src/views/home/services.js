@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const ServiceBlock = ({ title, children }) => {
@@ -36,16 +37,10 @@ const Services = () => {
           />
           <div className="flex flex-col gap-[60px]">
             <ServiceBlock title="Game Development">
-              With over two decades of experience, we're really good at building
-              websites, marketing platforms, web applications, and mobile apps.
-              We're currently using technologies like NextJS, Astro, React, and
-              Svelte, among others, to build something modern and maintainable.
+            Working primarily with Unreal Engine, Blender, Maya & Adobe Substance, we develop games for PC, Console & Mobile. We have an affinity for story-based games with beautiful visuals & immersive sound design. Got a project we could work together on? You know what to do.
             </ServiceBlock>
-            <ServiceBlock title="Game Development">
-              With over two decades of experience, we're really good at building
-              websites, marketing platforms, web applications, and mobile apps.
-              We're currently using technologies like NextJS, Astro, React, and
-              Svelte, among others, to build something modern and maintainable.
+            <ServiceBlock title="3D Asset Creation">
+            Custom-modeled 3D assets such as models & environments made completely from scratch in Blender to fit your exact creative needs.
             </ServiceBlock>
             <p className="font-bold text-[26px] leading-[32px] text-[#F7FCDE]">
               Ready to make a change?{" "}
@@ -55,17 +50,11 @@ const Services = () => {
             </p>
           </div>
           <div className="flex flex-col gap-[60px]">
-            <ServiceBlock title="Game Development">
-              With over two decades of experience, we're really good at building
-              websites, marketing platforms, web applications, and mobile apps.
-              We're currently using technologies like NextJS, Astro, React, and
-              Svelte, among others, to build something modern and maintainable.
+            <ServiceBlock title="3D Animation & Visualization">
+            End-to-end 3D animations & visualizations for games, film, TV and music videos, made with Blender & Maya.
             </ServiceBlock>
-            <ServiceBlock title="Game Development">
-              With over two decades of experience, we're really good at building
-              websites, marketing platforms, web applications, and mobile apps.
-              We're currently using technologies like NextJS, Astro, React, and
-              Svelte, among others, to build something modern and maintainable.
+            <ServiceBlock title="Sound Design">
+            Audio production ranging from foley & sound design to music recording & production for games, film, TV & music videos.
             </ServiceBlock>
           </div>
         </div>

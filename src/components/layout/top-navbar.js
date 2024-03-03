@@ -6,10 +6,10 @@ const links = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Games", href: "/" },
-  { label: "Services", href: "/" },
   { label: "Portfolio", href: "/" },
-  { label: "Blog", href: "/" },
-  { label: "Get in Touch", href: "/contact" },
+  { label: "Services", href: "/" },
+  // { label: "Blog", href: "/" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const NavigationList = () => {

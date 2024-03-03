@@ -6,8 +6,10 @@ import Footer from "../../components/layout/footer";
 import CtaButton, { CtaButtonVariants } from "@/components/cta-button";
 import Portfolio from "./portfolio";
 import Services from "./services";
+import { useRouter } from "next/router";
 
 const HomeView = () => {
+  const router = useRouter()
   return (
     <>
       <div className="relative">
@@ -36,7 +38,7 @@ const HomeView = () => {
             <div>
               <CtaButton
                 variant={CtaButtonVariants.primary}
-                className="w-[240px]"
+                className="w-[240px]" onClick={()=>window.open("https://forms.gle/gfZk46cDaCepj7FQ7","_blank")}
               >
                 Join the waitlist
               </CtaButton>
@@ -62,31 +64,29 @@ const HomeView = () => {
               creation & modeling, sound design & more.
             </p>
             <p>
-              Wanna receive dev updates & cool exclusive artwork for it? Join
-              the waitlist!
-            </p>
-            <CtaButton
-              variant={CtaButtonVariants.primary}
-              className="w-[300px]"
-            >
-              Let's work together
-            </CtaButton>
-          </div>
-          <div className="flex flex-col gap-[50px]">
-            <p>
               Currently, we’re working on The Grave Keeper, a run-and-gun
               first-person shooter for PC. It’s the story of an archaeologist
               diving into the mystery of an infamously abandoned graveyard, only
               to never be able to find his way back. It comes out at the end of
               2024.
             </p>
+          </div>
+          <div className="flex flex-col gap-[50px]">
             <p>
               We’re extremely passionate about telling stories, be it through
               the games we develop, the animations we make, the sounds we design
-              & the music we create. Sounds interesting? Wanna work with us? Get
-              in touch! (This’ll be the call to action instead of “Let’s work
-              together!”)
+              & the music we create. Sounds interesting? Wanna work with us?
             </p>
+            <p>
+              Wanna receive dev updates & cool exclusive artwork for it? Join
+              the waitlist!
+            </p>
+            <CtaButton
+              variant={CtaButtonVariants.primary}
+              className="w-[300px]" onClick={()=>{router.push("/contact")}}
+            >
+              Let's work together
+            </CtaButton>
           </div>
         </div>
       </section>
@@ -98,22 +98,19 @@ const HomeView = () => {
             height={2731}
           />
         </div>
-        <div className="flex flex-col gap-[200px] z-10">
-          <ProjectTile img="/assets/images/3d.jpg" textPrefix="3D">
-            Worked with a small team to build a chart-topping animations for one
-            of the fastest growing e-commerce brands in the world.
+        <div className="flex flex-col gap-[200px] z-10 rounded-[32px]">
+          <ProjectTile img="https://cdnb.artstation.com/p/assets/images/images/066/424/955/large/acedia-graded.jpg" textPrefix="3D">
+          Still from a music video we recently animated for a New York-based musician.
           </ProjectTile>
           <div>
             <ProjectTile
-              img="/assets/images/3d-1.jpg"
+              img="https://cdnb.artstation.com/p/assets/images/images/066/425/101/large/acedia-shatter-stone-01.jpg"
               textPrefix="3D"
               className="mb-20"
             >
-              Worked with a small team to build a chart-topping animations for
-              one of the fastest growing e-commerce brands in the world.
+              Still from a music video we recently animated for a New York-based musician.
             </ProjectTile>
-            <p className="text-[29px] leading-[44px] font-serif font-bold">
-              We got way more stuff to show you.{" "}
+            <p className="text-[29px] leading-[44px] font-serif font-bold rounded-[32px]">
               <a
                 href="https://www.artstation.com/acediadevs"
                 target="_blank"
