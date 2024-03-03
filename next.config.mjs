@@ -2,6 +2,7 @@
 const nextConfig = {
   output: "export",
   reactStrictMode: true,
+  optimizeFonts: false,
   images: {
     unoptimized: true,
     remotePatterns: [
