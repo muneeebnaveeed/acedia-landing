@@ -1,10 +1,15 @@
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
-export const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+export const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const clashGrotesk = localFont({
   variable: "--font-clash-grotesk",
+  display: "swap",
   src: [
     {
       path: "../assets/fonts/GROTESKLIGHT.woff2",
