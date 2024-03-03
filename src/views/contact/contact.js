@@ -1,5 +1,4 @@
 import CtaButton, { CtaButtonVariants } from "@/components/cta-button";
-import Footer from "@/components/layout/footer";
 import TopNavbar from "@/components/layout/top-navbar";
 import React from "react";
 
@@ -21,8 +20,7 @@ const ContactView = () => {
             className="px-[53px] py-[68px] bg-[#4813D8] rounded-[38px] w-full flex flex-col gap-[80px]"
             method="POST"
             name="contact-form"
-            onSubmit="submit"
-            data-netlify="true"
+            action="https://formspree.io/f/mrgnkwlr"
           >
             <div className="flex items-center gap-[80px]">
               <div className="flex items-start gap-[60px] flex-1">
