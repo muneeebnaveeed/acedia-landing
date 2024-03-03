@@ -2,28 +2,32 @@ import classNames from "classnames";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
+const links = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Games", href: "/" },
+  { label: "Services", href: "/" },
+  { label: "Portfolio", href: "/" },
+  { label: "Blog", href: "/" },
+  { label: "Get in Touch", href: "/contact" },
+];
+
 const NavigationList = () => {
+  const router = useRouter();
   return (
     <ul className="flex items-center justify-center w-full ">
       <div className="bg-[rgb(246,252,220,0.2)] flex items-center rounded-full">
-        {[
-          "Home",
-          "About Us",
-          "Games",
-          "Services",
-          "Portfolio",
-          "Blog",
-          "Get in Touch",
-        ].map((e, index, arr) => (
-          <li key={e}>
+        {links.map((e, index, arr) => (
+          <li key={e.label}>
             <button
               type="button"
+              onClick={() => router.push(e.href)}
               className={classNames(
                 "py-3 px-2 text-[15px] text-[rgba(255,255,255,0.8)] hover:text-[rgba(255,255,255,1)] transition-colors cursor-pointer font-sans",
                 { "pl-5": index <= 0, "pr-5": index >= arr.length - 1 }
               )}
             >
-              {e}
+              {e.label}
             </button>
           </li>
         ))}

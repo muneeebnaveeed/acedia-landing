@@ -2,7 +2,7 @@ import TopNavbar from "@/components/layout/top-navbar";
 import Image from "next/image";
 import React from "react";
 import ProjectTile from "./project-tile";
-import Footer from "./footer";
+import Footer from "../../components/layout/footer";
 import CtaButton, { CtaButtonVariants } from "@/components/cta-button";
 
 const HomeView = () => {
