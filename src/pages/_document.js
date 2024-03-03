@@ -1,8 +1,12 @@
+import { clashGrotesk, inter } from "@/utils/fonts";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html
+      lang="en"
+      className={`${clashGrotesk.variable} ${inter.variable} font-sans`}
+    >
       <Head>
         <link
           rel="stylesheet"

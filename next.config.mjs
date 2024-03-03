@@ -8,6 +8,11 @@ const nextConfig = {
         hostname: "**.figma.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "**.gstatic.com",
+        port: "",
+      },
     ],
   },
 };

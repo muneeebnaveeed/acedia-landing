@@ -1,9 +1,9 @@
 import TopNavbar from "@/components/layout/top-navbar";
-import PrimaryCta from "@/components/primary-cta";
 import Image from "next/image";
 import React from "react";
 import ProjectTile from "./project-tile";
-import { clashGrotesk, inter } from "@/utils/fonts";
+import Footer from "./footer";
+import CtaButton, { CtaButtonVariants } from "@/components/cta-button";
 
 const HomeView = () => {
   return (
@@ -17,14 +17,19 @@ const HomeView = () => {
         />
         <TopNavbar />
         <section className="w-full h-[950px] bg-[url('/assets/images/header-image.jpg')] flex justify-between items-end pb-28 px-10">
-          <div className={clashGrotesk.className}>
+          <div className="font-serif">
             <h1 className="text-[137px] text-white uppercase translate-y-7">
               The Grave Keeper
             </h1>
             <h3 className="text-[48px] text-white">Coming Winter, 2024</h3>
           </div>
           <div>
-            <PrimaryCta className="w-[240px]">Join the waitlist</PrimaryCta>
+            <CtaButton
+              variant={CtaButtonVariants.primary}
+              className="w-[240px]"
+            >
+              Join the waitlist
+            </CtaButton>
           </div>
         </section>
       </div>
@@ -37,9 +42,7 @@ const HomeView = () => {
             alt="Acedia Logo"
           />
         </div>
-        <div
-          className={`flex gap-[100px] text-[29px] leading-[44px] ${inter.className}`}
-        >
+        <div className="flex gap-[100px] text-[29px] leading-[44px] font-sans">
           <div className="flex flex-col gap-[50px]">
             <p>
               A game development & creative studio delivering narrative-driven,
@@ -51,7 +54,12 @@ const HomeView = () => {
               Wanna receive dev updates & cool exclusive artwork for it? Join
               the waitlist!
             </p>
-            <PrimaryCta className="w-[300px]">Let's work together</PrimaryCta>
+            <CtaButton
+              variant={CtaButtonVariants.primary}
+              className="w-[300px]"
+            >
+              Let's work together
+            </CtaButton>
           </div>
           <div className="flex flex-col gap-[50px]">
             <p>
@@ -71,24 +79,29 @@ const HomeView = () => {
           </div>
         </div>
       </section>
-      <section className="px-10">
-        <div className="flex flex-col gap-[200px]">
+      <section className="relative px-10 pt-[500px] overflow-clip">
+        <div className="absolute z-[-1] top-0 right-0">
+          <Image
+            src="/assets/images/acedia-guide-(1)-16.png"
+            width={2316}
+            height={2731}
+          />
+        </div>
+        <div className="flex flex-col gap-[200px] z-10">
           <ProjectTile img="/assets/images/3d.jpg" textPrefix="3D">
             Worked with a small team to build a chart-topping animations for one
             of the fastest growing e-commerce brands in the world.
           </ProjectTile>
           <div>
             <ProjectTile
-              img="/assets/images/3d.jpg"
+              img="/assets/images/3d-1.jpg"
               textPrefix="3D"
               className="mb-20"
             >
               Worked with a small team to build a chart-topping animations for
               one of the fastest growing e-commerce brands in the world.
             </ProjectTile>
-            <p
-              className={`text-[29px] leading-[44px] ${clashGrotesk.className} font-bold`}
-            >
+            <p className="text-[29px] leading-[44px] font-serif font-bold">
               We got way more stuff to show you.{" "}
               <a
                 href="https://www.artstation.com/acediadevs"
@@ -101,13 +114,87 @@ const HomeView = () => {
           </div>
         </div>
       </section>
-      <section className="py-[86px] px-10">
-        <h2
-          className={`text-[#A2FF00] text-[88px] leading-[86px] ${clashGrotesk.className} font-semibold`}
-        >
-          Services
-        </h2>
+      <section className="py-[86px] px-10 relative">
+        <div className="absolute top-0 left-0 rotate-[-0.61] z-[-1]">
+          <Image
+            src="/assets/images/acedia-guide-(1)-15.png"
+            width={1850}
+            height={1545}
+          />
+        </div>
+        <div className="z-10">
+          <h2 className="text-[#A2FF00] text-[88px] leading-[86px] font-serif font-semibold underline underline-offset-[12px]">
+            Services
+          </h2>
+          <div className="mt-[100px] flex gap-[64px] font-serif">
+            <Image
+              className="rounded-[32px]"
+              src="/assets/images/services-section.jpg"
+              width={565}
+              height={622}
+            />
+            <div className="flex flex-col gap-[60px]">
+              <div>
+                <h3 className="font-bold text-[26px] leading-[32px] text-[#F7FCDE] mb-[15px]">
+                  Game Development
+                </h3>
+                <p className="font-medium text-[18px] leading-[36px] text-[#F7FCD] opacity-90 max-w-[540px]">
+                  With over two decades of experience, we're really good at
+                  building websites, marketing platforms, web applications, and
+                  mobile apps. We're currently using technologies like NextJS,
+                  Astro, React, and Svelte, among others, to build something
+                  modern and maintainable.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-bold text-[26px] leading-[32px] text-[#F7FCDE] mb-[15px]">
+                  Game Development
+                </h3>
+                <p className="font-medium text-[18px] leading-[36px] text-[#F7FCD] opacity-90 max-w-[540px]">
+                  With over two decades of experience, we're really good at
+                  building websites, marketing platforms, web applications, and
+                  mobile apps. We're currently using technologies like NextJS,
+                  Astro, React, and Svelte, among others, to build something
+                  modern and maintainable.
+                </p>
+              </div>
+              <p className="font-bold text-[26px] leading-[32px] text-[#F7FCDE]">
+                Ready to make a change?{" "}
+                <span className="text-[#CFED4E] underline">
+                  Let's get started
+                </span>
+              </p>
+            </div>
+            <div className="flex flex-col gap-[60px]">
+              <div>
+                <h3 className="font-bold text-[26px] leading-[32px] text-[#F7FCDE] mb-[15px]">
+                  Game Development
+                </h3>
+                <p className="font-medium text-[18px] leading-[36px] text-[#F7FCD] opacity-90 max-w-[540px]">
+                  With over two decades of experience, we're really good at
+                  building websites, marketing platforms, web applications, and
+                  mobile apps. We're currently using technologies like NextJS,
+                  Astro, React, and Svelte, among others, to build something
+                  modern and maintainable.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-bold text-[26px] leading-[32px] text-[#F7FCDE] mb-[15px]">
+                  Game Development
+                </h3>
+                <p className="font-medium text-[18px] leading-[36px] text-[#F7FCD] opacity-90 max-w-[540px]">
+                  With over two decades of experience, we're really good at
+                  building websites, marketing platforms, web applications, and
+                  mobile apps. We're currently using technologies like NextJS,
+                  Astro, React, and Svelte, among others, to build something
+                  modern and maintainable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+      <Footer />
     </>
   );
 };

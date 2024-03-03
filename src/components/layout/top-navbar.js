@@ -19,7 +19,7 @@ const NavigationList = () => {
             <button
               type="button"
               className={classNames(
-                "py-3 px-2 text-[15px] text-[rgba(255,255,255,0.8)] hover:text-[rgba(255,255,255,1)] transition-colors cursor-pointer",
+                "py-3 px-2 text-[15px] text-[rgba(255,255,255,0.8)] hover:text-[rgba(255,255,255,1)] transition-colors cursor-pointer font-sans",
                 { "pl-5": index <= 0, "pr-5": index >= arr.length - 1 }
               )}
             >
