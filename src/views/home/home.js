@@ -125,8 +125,7 @@ const HomeView = () => {
             img="https://cdnb.artstation.com/p/assets/images/images/066/424/955/large/acedia-graded.jpg"
             textPrefix="3D"
           >
-            Still from a music video we recently animated for a New York-based
-            musician.
+            Assembly in Chaos // A personal artwork by the team.
           </ProjectTile>
           <div>
             <ProjectTile
@@ -134,8 +133,7 @@ const HomeView = () => {
               textPrefix="3D"
               className="mb-20"
             >
-              Still from a music video we recently animated for a New York-based
-              musician.
+              A concept render for one of our game demos, Split Horizons.
             </ProjectTile>
             <p className="text-[29px] leading-[44px] font-serif font-bold rounded-[32px]">
               <a

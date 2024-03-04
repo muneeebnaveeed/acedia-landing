@@ -18,7 +18,7 @@ const AboutView = () => {
         </div>
         <div className="z-10 w-full">
           <h1 className="font-bold font-serif text-[217px] leading-[192px] text-[#A2FF00] uppercase max-w-[860px] absolute left-[74px] top-[46px]">
-            Origin Story
+            The Team
           </h1>
           <TeamMemberTile
             img="https://media.licdn.com/dms/image/D4D03AQE2krSltA7ZXg/profile-displayphoto-shrink_800_800/0/1709512327242?e=1715212800&v=beta&t=cAXxiyhJz53wLPQ2CyHY61k99vicZXswnhffeJ8fV8I"
