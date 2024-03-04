@@ -12,9 +12,7 @@ const ContactView = () => {
             Contact
           </h1>
           <p className="font-medium text-[27px] leading-[44px] text-[#F7FCDE] max-w-[1100px] mb-[183px]">
-            DUMMY TEXT We build websites and apps for those who are ready to
-            reduce the carbon footprint of their digital brand and eliminate
-            barriers for their customers.
+          Just fill out the form and we'll be in touch.
           </p>
           <form
             className="px-[53px] py-[68px] bg-[#4813D8] rounded-[38px] w-full flex flex-col gap-[80px]"
