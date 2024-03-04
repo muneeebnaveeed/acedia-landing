@@ -27,7 +27,7 @@ const Services = () => {
         />
       </div>
       <div className="z-10">
-        <h2 className="text-[#A2FF00] text-[88px] leading-[86px] font-serif font-semibold underline underline-offset-[12px]">
+        <h2 className="text-[#A2FF00] text-[88px] leading-[86px] font-serif font-semibold">
           Services
         </h2>
         <div className="mt-[100px] flex gap-[64px] font-serif">
@@ -50,11 +50,11 @@ const Services = () => {
               completely from scratch in Blender to fit your exact creative
               needs.
             </ServiceBlock>
-            <p className="font-bold text-[26px] leading-[32px] text-[#F7FCDE]">
+            <p className="font-semibold text-[26px] leading-[32px] text-[#F7FCDE]">
               Ready to work with us?{" "}
               <a
                 onClick={() => router.push("/contact")}
-                className="text-[#CFED4E] underline"
+                className="text-[#CFED4E]"
               >
                 Reach out!
               </a>

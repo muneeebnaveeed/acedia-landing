@@ -28,7 +28,7 @@ const CtaButtonBase = ({ children, className, onClick, htmlType = "button" }) =>
       type={htmlType}
       onClick={onClick}
       className={cls(
-        "py-3 flex justify-between items-center px-10 text-[18px] leading-[36px] rounded-full",
+        "py-3 flex justify-between items-center px-10 text-[18px] leading-[36px] rounded-full hover:scale-105 transition duration-500 cursor-pointer",
         className?.root
       )}
     >

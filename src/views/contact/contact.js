@@ -8,8 +8,8 @@ const ContactView = () => {
       <TopNavbar />
       <section className="px-10 py-[120px] relative font-serif w-full">
         <div className="z-10 w-full">
-          <h1 className="uppercase text-[#A2FF00] text-[217px] leading-[192px] font-bold mb-[34px]">
-            Contact
+          <h1 className="uppercase text-[#A2FF00] text-[180px] leading-[192px] font-bold mb-[34px]">
+            Contact US
           </h1>
           <p className="font-medium text-[27px] leading-[44px] text-[#F7FCDE] max-w-[1100px] mb-[183px]">
           Just fill out the form and we'll be in touch.
@@ -20,7 +20,7 @@ const ContactView = () => {
             action="https://formspree.io/f/mrgnkwlr"
           >
             <div className="flex items-center gap-[80px]">
-              <div className="flex items-start gap-[60px] flex-1">
+              <div className="flex items-start gap-[60px] flex-1 items-center">
                 <label
                   className="uppercase text-[29px] leading-[44px] font-semibold min-w-[180px]"
                   htmlFor="name"
@@ -31,10 +31,10 @@ const ContactView = () => {
                   type="text"
                   id="name"
                   name="name"
-                  className="bg-[#A2FF00] p-[20px] text-black flex-1"
+                  className="bg-[#A2FF00] p-[20px] text-black flex-1 rounded-[16px]"
                 />
               </div>
-              <div className="flex items-start gap-[60px] flex-1">
+              <div className="flex items-start gap-[60px] flex-1 items-center">
                 <label
                   className="uppercase text-[29px] leading-[44px] font-semibold min-w-[180px]"
                   htmlFor="company"
@@ -45,12 +45,12 @@ const ContactView = () => {
                   type="text"
                   id="company"
                   name="company"
-                  className="bg-[#A2FF00] p-[20px] text-black flex-1"
+                  className="bg-[#A2FF00] p-[20px] text-black flex-1 rounded-[16px]"
                 />
               </div>
             </div>
             <div className="flex items-center gap-[80px]">
-              <div className="flex items-start gap-[60px] flex-1">
+              <div className="flex items-start gap-[60px] flex-1 items-center">
                 <label
                   className="uppercase text-[29px] leading-[44px] font-semibold min-w-[180px]"
                   htmlFor="email"
@@ -61,7 +61,7 @@ const ContactView = () => {
                   type="email"
                   id="email"
                   name="email"
-                  className="bg-[#A2FF00] p-[20px] text-black flex-1"
+                  className="bg-[#A2FF00] p-[20px] text-black flex-1 rounded-[16px]"
                 />
               </div>
               <div className="flex-1" />
@@ -78,7 +78,7 @@ const ContactView = () => {
                   type="text"
                   id="message"
                   name="message"
-                  className="bg-[#A2FF00] p-[20px] text-black flex-1 min-h-[200px]"
+                  className="bg-[#A2FF00] p-[20px] text-black flex-1 min-h-[200px] rounded-[16px]"
                 />
               </div>
               <div className="flex-1" />

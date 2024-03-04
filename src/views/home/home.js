@@ -49,7 +49,7 @@ const HomeView = () => {
               <h1 className="text-[137px] text-white uppercase translate-y-7">
                 The Grave Keeper
               </h1>
-              <h3 className="text-[48px] text-white">Coming Winter, 2024</h3>
+              <h3 className="text-[48px] text-white">Coming Winter 2024</h3>
             </div>
             <div>
               <CtaButton
@@ -89,16 +89,21 @@ const HomeView = () => {
               to never be able to find his way back. It comes out at the end of
               2024.
             </p>
+            <p >
+              <a
+                href="https://forms.gle/gfZk46cDaCepj7FQ7"
+                target="_blank"
+                className="text-[#CFED4E] text-[29px] leading-[44px] font-serif font-semibold rounded-[32px] inline"
+              >
+                Join the waitlist
+              </a> if you wanna receive dev updates & cool, exclusive artwork from the game.
+            </p>
           </div>
           <div className="flex flex-1 flex-col gap-[50px]">
             <p className="mb-8">
               We’re extremely passionate about telling stories, be it through
               the games we develop, the animations we make, the sounds we design
               & the music we create. Sounds interesting? Wanna work with us?
-            </p>
-            <p>
-              Wanna receive dev updates & cool exclusive artwork for it? Join
-              the waitlist!
             </p>
             <CtaButton
               variant={CtaButtonVariants.primary}
@@ -135,13 +140,13 @@ const HomeView = () => {
             >
               A concept render for one of our game demos, Split Horizons.
             </ProjectTile>
-            <p className="text-[29px] leading-[44px] font-serif font-bold rounded-[32px]">
+            <p className="text-[29px] leading-[44px] font-serif font-semibold rounded-[32px]">
               <a
                 href="https://www.artstation.com/acediadevs"
                 target="_blank"
-                className="text-[#CFED4E] underline"
+                className="text-[#CFED4E]"
               >
-                Check out more here
+                Check out our Artstation
               </a>
             </p>
           </div>
