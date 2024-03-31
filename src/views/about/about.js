@@ -29,7 +29,7 @@ const AboutView = () => {
             An avid gamer with 5 years of experience in 3D art & game development, Hussain is the CEO & the head of Visual Art at ACEDIA.
           </TeamMemberTile>
           <TeamMemberTile
-            img="https://media.licdn.com/dms/image/D4D03AQERpFlnaxTjtw/profile-displayphoto-shrink_800_800/0/1709512142571?e=1715212800&v=beta&t=Um8IAbd7idhmFPRZNDu-Ji1e4ZndQbzzgZg8aWQlDnI"
+            img="/assets/images/Tooba.jpg"
             name="Tooba Samad"
             link="https://www.linkedin.com/in/tooba-samad-8a7656276/"
             className="justify-start"
