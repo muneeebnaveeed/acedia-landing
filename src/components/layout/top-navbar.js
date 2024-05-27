@@ -40,6 +40,7 @@ const NavigationList = ({
         {links.map((e, index, arr) => {
           return (
             <NavigationListItem
+              key={e.label}
               onClick={() => {
                 if (e.label === "Home") router.push("/");
                 else if (e.label === "About Us") router.push("/about");
