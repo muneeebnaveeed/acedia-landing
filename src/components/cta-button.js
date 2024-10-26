@@ -22,13 +22,18 @@ const RightArrowIcon = ({ className }) => (
   </svg>
 );
 
-const CtaButtonBase = ({ children, className, onClick, htmlType = "button" }) => {
+const CtaButtonBase = ({
+  children,
+  className,
+  onClick,
+  htmlType = "button",
+}) => {
   return (
     <button
       type={htmlType}
       onClick={onClick}
       className={cls(
-        "py-3 flex justify-between items-center px-10 text-[18px] leading-[36px] rounded-full hover:scale-105 transition duration-500 cursor-pointer",
+        "py-1.5 flex justify-between items-center px-9 text-[18px] leading-[36px] rounded-full hover:scale-105 transition duration-500 cursor-pointer font-medium",
         className?.root
       )}
     >
@@ -38,7 +43,13 @@ const CtaButtonBase = ({ children, className, onClick, htmlType = "button" }) =>
   );
 };
 
-const CtaButton = ({ className, variant, children, onClick, htmlType = "button" }) => {
+const CtaButton = ({
+  className,
+  variant,
+  children,
+  onClick,
+  htmlType = "button",
+}) => {
   return (
     <CtaButtonBase
       htmlType={htmlType}
@@ -46,7 +57,7 @@ const CtaButton = ({ className, variant, children, onClick, htmlType = "button" 
       className={{
         root: cls(
           {
-            "bg-[#CFED4E] text-black": variant === CtaButtonVariants.primary,
+            "bg-[#A2FF00] text-black": variant === CtaButtonVariants.primary,
             "bg-[rgb(72,19,216,0.8)] text-[#F6FCDC]":
               variant === CtaButtonVariants.footer,
           },

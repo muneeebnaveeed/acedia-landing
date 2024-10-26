@@ -2,12 +2,18 @@ import classNames from "classnames";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
+export const Sections = Object.freeze({
+  GAMES: "games",
+  PORTFOLIO: "portfolio",
+  SERVICES: "services",
+});
+
 const links = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Games", href: "/" },
-  { label: "Portfolio", href: "/" },
-  { label: "Services", href: "/" },
+  { label: "Games", href: `/?section=${Sections.GAMES}` },
+  { label: "Portfolio", href: `/?section=${Sections.PORTFOLIO}` },
+  { label: "Services", href: `/?section=${Sections.SERVICES}` },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -18,7 +24,7 @@ const NavigationListItem = ({ isFirstItem, isLastItem, children, onClick }) => {
         type="button"
         onClick={onClick}
         className={classNames(
-          "py-3 px-2 text-[15px] text-[rgba(255,255,255,0.8)] hover:text-[rgba(255,255,255,1)] transition-colors cursor-pointer font-sans",
+          "py-3 px-2 text-[15px] text-[#F6FCDC] hover:text-opacity-80 transition-opacity cursor-pointer font-sans font-medium leading-[28px]",
           { "pl-5": isFirstItem, "pr-5": isLastItem }
         )}
       >
@@ -28,37 +34,20 @@ const NavigationListItem = ({ isFirstItem, isLastItem, children, onClick }) => {
   );
 };
 
-const NavigationList = ({
-  onClickGames,
-  onClickPortfolio,
-  onClickServices,
-}) => {
+const NavigationList = () => {
   const router = useRouter();
   return (
     <ul className="flex items-center justify-center w-full ">
-      <div className="bg-[rgb(246,252,220,0.2)] flex items-center rounded-full">
-        {links.map((e, index, arr) => {
+      <div className="bg-[#F6FCDC33] bg-opacity-20 flex items-center rounded-full">
+        {links.map((link, index, arr) => {
           return (
             <NavigationListItem
-              key={e.label}
-              onClick={() => {
-                if (e.label === "Home") router.push("/");
-                else if (e.label === "About Us") router.push("/about");
-                else if (e.label === "Games") {
-                  if (router.pathname === "/") onClickGames?.();
-                  else router.push("/").then(() => onClickGames?.());
-                } else if (e.label === "Portfolio") {
-                  if (router.pathname === "/") onClickPortfolio?.();
-                  else router.push("/").then(() => onClickPortfolio?.());
-                } else if (e.label === "Services") {
-                  if (router.pathname === "/") onClickServices?.();
-                  else router.push("/").then(() => onClickServices?.());
-                } else if (e.label === "Contact Us") router.push("/contact");
-              }}
+              key={link.label}
+              onClick={() => router.push(link.href, undefined)}
               isLastItem={index >= arr.length - 1}
               isFirstItem={index <= 0}
             >
-              {e.label}
+              {link.label}
             </NavigationListItem>
           );
         })}
@@ -67,13 +56,22 @@ const NavigationList = ({
   );
 };
 
-const TopNavbar = ({ onClickGames, onClickPortfolio, onClickServices }) => {
+const TopNavbar = ({ className }) => {
   const router = useRouter();
   return (
-    <nav className="relative bg-[#4813D8] w-full h-[72px] px-10">
+    <nav
+      className={classNames(
+        "w-full px-[29px]",
+        {
+          relative:
+            typeof className === "string" && !className.includes("absolute"),
+        },
+        className
+      )}
+    >
       <button
         type="button"
-        className="absolute -translate-y-1/2 cursor-pointer top-9 left-10"
+        className="absolute py-[27px]"
         onClick={() => router.push("/")}
       >
         <Image
@@ -83,13 +81,10 @@ const TopNavbar = ({ onClickGames, onClickPortfolio, onClickServices }) => {
           alt="Acedia Logo"
         />
       </button>
-      <div className="flex items-center justify-between w-full h-full">
-        <NavigationList
-          onClickGames={onClickGames}
-          onClickPortfolio={onClickPortfolio}
-          onClickServices={onClickServices}
-        />
+      <div className="flex items-center py-[27px] justify-between w-full h-full">
+        <NavigationList />
       </div>
+      <div />
     </nav>
   );
 };
